@@ -1,0 +1,31 @@
+<!-- Создайте массив, состоящий из 5 элементов. (Элементами массива должны быть произвольные цифры в диапазоне от 0 до 10.)
+Удалите значение 3, если будет такое значение.
+Каждое значение исходного элемента массива необходимо увеличить на 10%.
+Выведите в консоль два этих массива. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const massRandomFive = [];
+        for (let i = 1; i <= 5; i++) {
+            massRandomFive.push(Math.trunc(Math.random() * 10));
+        }
+        while (massRandomFive.indexOf(3) !== -1) {
+            massRandomFive.splice(massRandomFive.indexOf(3), 1);
+        }
+        const massPerc = massRandomFive.map(element => parseFloat((element * 1.1).toFixed(1)));
+        console.log(massRandomFive); // есть проблема в этом массиве (т.е. если две 3-ки генерируется, то удаляется только одна)
+        console.log(massPerc); // массив, увеличенный на 10%, parseFloat юзанул для приведения элементов массивы к числовому значению
+    </script>
+</body>
+
+</html>
