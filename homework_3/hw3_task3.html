@@ -1,0 +1,26 @@
+<!-- Создайте массив, состоящий из 5 произвольных значений, которые генерируются программой(диапазон значений от 0 до 10). Возведите каждый элемент этого массива в квадрат. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const massRandomTen = [];
+        for (let i = 1; i <= 5; i++) {
+            massRandomTen.push(Math.trunc(Math.random() * 10));
+        }
+        const massRandomTenSquare = massRandomTen.map(element => Math.pow(element, 2));
+        console.log(massRandomTen); // выводит сгенерированный массив в консоль
+        console.log(massRandomTenSquare); // выводит уже возведенный в квадрат массив 
+    </script>
+</body>
+
+</html>
