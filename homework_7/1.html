@@ -61,12 +61,14 @@
     3. При клике на кнопку "В корзину" название кнопки должно поменяться на
     "Добавлено" и кнопка должна стать неактивной.
      */
-    const buttonEl = document.querySelectorAll('button');
-    buttonEl.forEach(button => {
-      button.addEventListener('click', (e) => {
-        e.target.innerText = 'Добавлено';
-        e.target.disabled = true;
-      });
+
+    document.body.addEventListener('click', e => {
+      const button = e.target;
+      if (button.tagName !== 'BUTTON') {
+        return;
+      }
+      button.textContent = 'Добавлено';
+      button.disabled = true;
     });
 
     /*
