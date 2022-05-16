@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Homework</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link rel="stylesheet" href="mainCart.css">
 </head>
 
 <body>
@@ -26,10 +27,87 @@ https://www.figma.com/file/SbfOi2i4S1pIs0G6uOLPCx/shop-(Copy)?node-id=73%3A140м
 
 Отобразить на странице 2 товара добавленных в корзину
 -->
-
+    <div class="product-box">
+        <!-- <div class="product">
+            <img class="product__img" src="" alt="">
+            <div class="product__disc">
+                <h2 class="product__name"></h2>
+                <p class="product__price"></p>
+                <p class="product__color"></p>
+                <p class="product__size"></p>
+                <p class="product__quantity"></p>
+            </div>
+        </div> -->
+    </div>
 
     <script>
         "use strict";
+
+        const products = [
+            {
+                imgSrc: 'images/img1.png',
+                name: 'MANGO  PEOPLE  T-SHIRT',
+                price: 'Price: $300',
+                color: 'Color: Red',
+                size: 'Size: Xl',
+                quantity: 'Quantity: 2',
+            },
+            {
+                imgSrc: 'images/img2.png',
+                name: 'MANGO  PEOPLE  T-SHIRT',
+                price: 'Price: $300',
+                color: 'Color: Red',
+                size: 'Size: Xl',
+                quantity: 'Quantity: 2',
+            }
+        ];
+        const productContent = document.querySelector('.product-box');
+
+        function createProduct(recipeProduct) {
+            const product = document.createElement('div');
+            product.classList.add('product');
+            productContent.prepend(product);
+
+            const productImage = document.createElement('img');
+            productImage.src = recipeProduct.imgSrc;
+            productImage.classList.add('product__img');
+            product.append(productImage);
+
+            const productDisc = document.createElement('div');
+            productDisc.classList.add('product__disc');
+            product.append(productDisc);
+
+            const productName = document.createElement('h2');
+            productName.classList.add('product__name');
+            productName.textContent = recipeProduct.name;
+            productDisc.append(productName);
+
+            const productPrice = document.createElement('p');
+            productPrice.classList.add('product__price');
+            productPrice.textContent = recipeProduct.price;
+            productDisc.append(productPrice);
+
+            const productColor = document.createElement('p');
+            productColor.classList.add('product__color');
+            productColor.textContent = recipeProduct.color;
+            productDisc.append(productColor);
+
+            const productSize = document.createElement('p');
+            productSize.classList.add('product__size');
+            productSize.textContent = recipeProduct.size;
+            productDisc.append(productSize);
+
+            const productQuantity = document.createElement('p');
+            productQuantity.classList.add('product__quantity');
+            productQuantity.textContent = recipeProduct.quantity;
+            productDisc.append(productQuantity);
+
+            return product;
+        }
+
+        products.forEach(element => {
+            productContent.append(createProduct(element));
+        })
     </script>
 </body>
 
