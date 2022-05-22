@@ -1,0 +1,129 @@
+.product-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 652px;
+}
+
+@media (max-width: 1024px) {
+  .product-box {
+    max-width: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 667px) {
+  .product-box {
+    max-width: 100%;
+    margin-left: 9px;
+    margin-right: 9px;
+  }
+}
+
+.product-box .product {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 306px;
+  margin-bottom: 72.5px;
+  -webkit-box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+          box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+}
+
+@media (max-width: 1024px) {
+  .product-box .product {
+    margin-bottom: 62.5px;
+  }
+}
+
+@media (max-width: 667px) {
+  .product-box .product {
+    margin-bottom: 30px;
+    height: 188px;
+  }
+}
+
+.product-box .product:nth-child(1) {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 667px) {
+  .product-box .product:nth-child(1) {
+    margin-bottom: 32px;
+  }
+}
+
+.product-box .product img {
+  height: inherit;
+}
+
+.product-box .product__disc {
+  padding-left: 31px;
+}
+
+@media (max-width: 667px) {
+  .product-box .product__disc {
+    padding-left: 17px;
+  }
+}
+
+.product-box .product__disc h2 {
+  width: 220px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #222222;
+  margin: 22px 0 42px;
+}
+
+@media (max-width: 667px) {
+  .product-box .product__disc h2 {
+    width: 135px;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 13px 0 25px;
+  }
+}
+
+.product-box .product__disc p {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #575757;
+}
+
+@media (max-width: 667px) {
+  .product-box .product__disc p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.product-box .product__disc p span {
+  color: #f16d7f;
+}
+
+.product-box .product__disc p .spanRect {
+  color: #575757;
+  display: inline-block;
+  border: 1px solid #eaeaea;
+  width: 43px;
+  margin-left: 24px;
+  text-align: center;
+}
+
+@media (max-width: 667px) {
+  .product-box .product__disc p .spanRect {
+    margin-left: 15px;
+  }
+}
+/*# sourceMappingURL=mainCart.css.map */

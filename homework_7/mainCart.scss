@@ -1,0 +1,102 @@
+.product-box {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 652px;
+
+
+    @media (max-width: 1024px) {
+        max-width: 100%;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    @media (max-width: 667px) {
+        max-width: 100%;
+        margin-left: 9px;
+        margin-right: 9px;
+    }
+
+    & .product {
+        position: relative;
+        display: flex;
+        height: 306px;
+        margin-bottom: 72.5px;
+        box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+
+        @media (max-width: 1024px) {
+            margin-bottom: 62.5px;
+        }
+
+        @media (max-width: 667px) {
+            margin-bottom: 30px;
+            height: 188px;
+        }
+
+        &:nth-child(1) {
+            margin-bottom: 40px;
+
+            @media (max-width: 667px) {
+                margin-bottom: 32px;
+            }
+        }
+
+        & img {
+            height: inherit;
+        }
+
+
+        &__disc {
+            padding-left: 31px;
+
+            @media (max-width: 667px) {
+                padding-left: 17px;
+            }
+
+            & h2 {
+                width: 220px;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 29px;
+                color: #222222;
+                margin: 22px 0 42px;
+
+                @media (max-width: 667px) {
+                    width: 135px;
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin: 13px 0 25px;
+                }
+            }
+
+            & p {
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 26px;
+                color: #575757;
+
+                @media (max-width: 667px) {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+
+                & span {
+                    color: #f16d7f;
+                }
+
+                & .spanRect {
+                    color: #575757;
+                    display: inline-block;
+                    border: 1px solid #eaeaea;
+                    width: 43px;
+                    margin-left: 24px;
+                    text-align: center;
+
+                    @media (max-width: 667px) {
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
